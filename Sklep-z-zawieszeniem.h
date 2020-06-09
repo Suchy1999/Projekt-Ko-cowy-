@@ -20,7 +20,9 @@ public:
     ~Sklep();
 
 void dodaj_do_sklepu(czesc element);
+void dodaj_do_sklepuAM(amortyzator skladnik);
 void podglad();
+void podgladAM();
 void wczytaj();
 void dodaj_amorek();
 };
