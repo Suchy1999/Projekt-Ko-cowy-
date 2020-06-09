@@ -23,6 +23,10 @@ void Sklep::dodaj_do_sklepu(czesc element)
 {
     zestawCzesci.push_back(element);
 }
+void Sklep::dodaj_do_sklepuAM(amortyzator skladnik)
+{
+    zestawAmorkow.push_back(skladnik);
+}
 
 void Sklep::podglad()
 {
@@ -33,7 +37,15 @@ void Sklep::podglad()
 	}
 
 }
+void Sklep::podgladAM()
+{
+    cout << "\nWyswietlam wszystkie elementy listy:"<<endl;
+    for(auto& gaz : zestawAmorkow)
+	{
+		gaz.wypisz();
+	}
 
+}
 
 void Sklep::wczytaj()
 {
@@ -86,8 +98,8 @@ void Sklep::dodaj_amorek()
     tekstStream>>ro;
     tekstStream>>ty;
     amortyzator skladnik(ma,mo,pr,ce,ro,ty);
-    amortyzatory.dodaj_do_sklepu(skladnik);
+    amortyzatory.dodaj_do_sklepuAM(skladnik);
     }
     plik.close();
-     amortyzatory.podglad();
+     amortyzatory.podgladAM();
 }
