@@ -42,7 +42,7 @@ void Sklep::podgladAM()
     cout << "\nWyswietlam wszystkie elementy listy:"<<endl;
     for(auto& gaz : zestawAmorkow)
 	{
-		gaz.wypisz();
+		gaz.wypiszAM();
 	}
 
 }
