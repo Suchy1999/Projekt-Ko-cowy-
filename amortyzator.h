@@ -16,5 +16,5 @@ class amortyzator: public czesc
         void setTyp(string _typ);
         string getRodzaj() const { return rodzaj; }
         string getTyp() const {return typ; }
-        void wypiszAM() const { std::cout <<"Marka: "<< marka <<" Model: "<< model <<" Producent: "<<producent <<" Cena: "<< cena << "Rodzaj: "<<rodzaj<<"Typ: "<<typ<< "\n"; }
+        void wypiszAM() const { czesc::wypisz(); cout << "Rodzaj: "<<rodzaj<<"Typ: "<<typ<< "\n"; }
 };
